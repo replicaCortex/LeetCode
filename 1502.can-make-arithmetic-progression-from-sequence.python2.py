@@ -18,7 +18,7 @@ class Solution(object):
         return True
 
 
-# sol = Solution()
-# arr = [3, 5, 1]
-# print(sol.canMakeArithmeticProgression(arr))
+sol = Solution()
+arr = [3, 5, 1]
+print(sol.canMakeArithmeticProgression(arr))
 # @leet end
