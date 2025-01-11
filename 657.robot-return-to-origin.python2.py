@@ -6,27 +6,9 @@ class Solution(object):
         :rtype: bool
         """
 
-        if len(moves) == 1:
-            return False
-
-        start = [0, 0]
-        for i in range(len(moves)):
-            # move Ox
-
-            if moves[i] == "U":
-                start[0] = start[0] + 1
-
-            elif moves[i] == "D":
-                start[0] = start[0] - 1
-            # move Oy
-
-            elif moves[i] == "R":
-                start[1] = start[1] + 1
-
-            else:
-                start[1] = start[1] - 1
-
-        if start == [0, 0]:
+        if moves.count("R") == moves.count("L") and moves.count(
+            "U"
+        ) == moves.count("D"):
             return True
 
         return False
@@ -38,6 +20,6 @@ class Solution(object):
 sol = Solution()
 moves = "UD"
 
-moves = "RRDD"
+# moves = "RRDD"
 # moves = "ULRDULDR"
 print(sol.judgeCircle(moves))
