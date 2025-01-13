@@ -6,14 +6,7 @@ class Solution(object):
         :rtype: int
         """
 
-        _tmp = []
-        for i in range(len(accounts)):
-            tmp = 0
-            for j in range(len(accounts[i])):
-                tmp += accounts[i][j]
-            _tmp.append(tmp)
-
-        return max(_tmp)
+        return max([sum(acc) for acc in accounts])
 
 
 # @leet end
