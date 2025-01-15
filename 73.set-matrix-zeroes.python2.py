@@ -1,47 +1,31 @@
 # @leet start
 
 
-class Solution(object):
+class Solution:
     def setZeroes(self, matrix):
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Модифицирует матрицу таким образом, что если элемент равен 0,
+        то весь соответствующий столбец и строка становятся 0.
         """
+        n = len(matrix)  # Количество строк
+        m = len(matrix[0])  # Количество столбцов
 
-        row, cols = len(matrix), len(matrix[0])
+        # Множества для хранения строк и столбцов, содержащих 0
+        set_rows = set()
+        set_columns = set()
 
-        tmp = []
-        # for i in range(rows * cols):
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
+        # Первый проход: находим строки и столбцы, где есть 0
+        for i in range(n):
+            for j in range(m):
                 if matrix[i][j] == 0:
-                    tmp.append([i, j])
+                    set_rows.add(i)  # Добавляем индекс строки
+                    set_columns.add(j)  # Добавляем индекс столбца
 
-        dx, dy = 1, 0
-        for i in range(len(tmp)):
-            x, y = tmp[i]
-            count = 0
-
-            while True:
-
-                if x != row and y != cols:
-                    matrix[x][y] = 0
-
-                if abs(x + dx) >= row or abs(y + dy) >= cols:
-                    count += 1
-                    if count == 4:
-                        break
-
-                    x, y = tmp[i]
-                    dx, dy = -dy, dx
-
-                # if abs(x + dx) == cols or abs(y + dy) == row:
-                #     dx, dy = -dy, dx
-
-                x += dx
-                y += dy
-
-        # return matrix
+        # Второй проход: обновляем матрицу
+        for i in range(n):
+            for j in range(m):
+                if i in set_rows or j in set_columns:
+                    matrix[i][j] = 0
 
 
 # @leet end
