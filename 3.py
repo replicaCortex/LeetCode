@@ -42,6 +42,6 @@ current = head
 
 for i in range(1, len(head_)):
     current.next = ListNode(val=head_[i])
-    current = head.next
+    current = current.next
 
 head.printList()
