@@ -33,5 +33,5 @@ class Solution(object):
 
 sol = Solution()
 nums = [1, 3, 5, 6]
-target = 2
+target = 20
 print(sol.searchInsert(nums, target))
