@@ -9,8 +9,9 @@ class Solution(object):
         num = "1" * len(nums[0])
         int_ = int(num, 2)
         ord_ = bin(int_)[2:]
+        x = len(str(bin(int_)[2:]))
 
-        while len(str(bin(int_)[2:])) <= len(num):
+        while x <= len(num):
             if ord_ not in nums:
                 return ord_
 
