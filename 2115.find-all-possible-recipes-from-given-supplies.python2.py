@@ -51,19 +51,19 @@ recipes = ["bread", "sandwich"]
 ingredients = [["yeast", "flour"], ["bread", "meat"]]
 supplies = ["yeast", "flour", "meat"]
 
-# recipes = ["bread", "sandwich", "burger"]
-# ingredients = [["yeast", "flour"], ["bread", "meat"], ["sandwich", "meat", "bread"]]
-# supplies = ["yeast", "flour", "meat"]
-#
-# recipes = ["ju", "fzjnm", "x", "e", "zpmcz", "h", "q"]
-# ingredients = [
-#     ["d"],
-#     ["hveml", "f", "cpivl"],
-#     ["cpivl", "zpmcz", "h", "e", "fzjnm", "ju"],
-#     ["cpivl", "hveml", "zpmcz", "ju", "h"],
-#     ["h", "fzjnm", "e", "q", "x"],
-#     ["d", "hveml", "cpivl", "q", "zpmcz", "ju", "e", "x"],
-#     ["f", "hveml", "cpivl"],
-# ]
-# supplies = ["f", "hveml", "cpivl", "d"]
+recipes = ["bread", "sandwich", "burger"]
+ingredients = [["yeast", "flour"], ["bread", "meat"], ["sandwich", "meat", "bread"]]
+supplies = ["yeast", "flour", "meat"]
+
+recipes = ["ju", "fzjnm", "x", "e", "zpmcz", "h", "q"]
+ingredients = [
+    ["d"],
+    ["hveml", "f", "cpivl"],
+    ["cpivl", "zpmcz", "h", "e", "fzjnm", "ju"],
+    ["cpivl", "hveml", "zpmcz", "ju", "h"],
+    ["h", "fzjnm", "e", "q", "x"],
+    ["d", "hveml", "cpivl", "q", "zpmcz", "ju", "e", "x"],
+    ["f", "hveml", "cpivl"],
+]
+supplies = ["f", "hveml", "cpivl", "d"]
 print(sol.findAllRecipes(recipes, ingredients, supplies))
